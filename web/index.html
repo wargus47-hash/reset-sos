@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.00001,viewport-fit=cover" />
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#060084" />
+    <link rel="manifest" href="/reset-sos/manifest.json" />
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="RESET SOS" />
+    <link rel="apple-touch-icon" href="/reset-sos/assets/logo_reset.png" />
+
+    <!-- SEO / partage -->
+    <meta name="description" content="Régulation émotionnelle sensorielle — Méthode RESET par Atypikali" />
+    <meta property="og:title" content="RESET SOS" />
+    <meta property="og:description" content="Régulation émotionnelle sensorielle — Méthode RESET par Atypikali" />
+
+    <%- helmet.title %>
+    <%- helmet.meta %>
+    <%- helmet.link %>
+    <%- helmet.style %>
+    <%- helmet.script %>
+
+    <style>
+      html, body, #root { height: 100%; margin: 0; padding: 0; background: #060084; }
+      * { box-sizing: border-box; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <%- script %>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker
+            .register('/reset-sos/sw.js', { scope: '/reset-sos/' })
+            .then(function (reg) {
+              reg.addEventListener('updatefound', function () {
+                var newWorker = reg.installing;
+                newWorker.addEventListener('statechange', function () {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    window.__SW_UPDATE_AVAILABLE__ = true;
+                  }
+                });
+              });
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

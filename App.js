@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Platform, LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import * as Notifications from 'expo-notifications';
 
 import HomeScreen              from './src/screens/HomeScreen';
 import BriefingScreen          from './src/screens/BriefingScreen';
@@ -21,28 +20,29 @@ import BilanEmotionnelScreen   from './src/screens/BilanEmotionnelScreen';
 import SurvivalQuizScreen      from './src/screens/SurvivalQuizScreen';
 import CertificationScreen     from './src/screens/CertificationScreen';
 
-// Supprime l'avertissement push (on n'utilise que des notifications locales)
-LogBox.ignoreLogs([
-  'expo-notifications: Android Push',
-  'expo-notifications: Error encountered',
-]);
-
-// Comportement global des notifications (affichage quand app au premier plan)
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldPlaySound: false,
-    shouldSetBadge:  false,
-  }),
-});
+// Notifications uniquement sur mobile
+let Notifications = null;
+if (Platform.OS !== 'web') {
+  Notifications = require('expo-notifications');
+  LogBox.ignoreLogs([
+    'expo-notifications: Android Push',
+    'expo-notifications: Error encountered',
+  ]);
+  Notifications.setNotificationHandler({
+    handleNotification: async () => ({
+      shouldShowAlert: true,
+      shouldPlaySound: false,
+      shouldSetBadge:  false,
+    }),
+  });
+}
 
 const Stack = createStackNavigator();
 
 export default function App() {
 
   useEffect(() => {
-    // Crée le canal Android pour les rappels de suivi clients
-    if (Platform.OS === 'android') {
+    if (Platform.OS === 'android' && Notifications) {
       Notifications.setNotificationChannelAsync('reset-followup', {
         name:             'Suivi clients RESET',
         importance:       Notifications.AndroidImportance.DEFAULT,

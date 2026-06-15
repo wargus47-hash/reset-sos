@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import { Colors } from '../theme/colors';
 import { hasGivenConsent, saveConsent } from '../storage/consent';
+import { BUILD_VERSION } from '../version';
 
 const FORMATIONS_URL = 'https://formations.atypikali.com/formations/';
 
@@ -326,6 +327,27 @@ export default function HomeScreen({ navigation }) {
           <Text style={styles.legalFooterSub}>
             Application non médicale — En cas de crise : 3114
           </Text>
+
+          {/* Version + bouton mise à jour (web uniquement) */}
+          {Platform.OS === 'web' && (
+            <View style={styles.versionRow}>
+              <Text style={styles.versionText}>v{BUILD_VERSION}</Text>
+              <TouchableOpacity
+                style={styles.updateBtn}
+                onPress={() => {
+                  if (window.caches) {
+                    caches.keys()
+                      .then(keys => Promise.all(keys.map(k => caches.delete(k))))
+                      .then(() => window.location.reload(true));
+                  } else {
+                    window.location.reload(true);
+                  }
+                }}
+              >
+                <Text style={styles.updateBtnText}>🔄 Vérifier les mises à jour</Text>
+              </TouchableOpacity>
+            </View>
+          )}
         </View>
 
       </ScrollView>
@@ -367,9 +389,13 @@ const styles = StyleSheet.create({
   bottomBannerLink:{ color: Colors.turquoise },
 
   // ── Footer légal ──
-  legalFooter: { marginHorizontal: 24, marginTop: 12, alignItems: 'center', gap: 4 },
+  legalFooter: { marginHorizontal: 24, marginTop: 12, alignItems: 'center', gap: 4, paddingBottom: 8 },
   legalFooterLink: { fontSize: 10, color: 'rgba(255,255,255,0.2)', textDecorationLine: 'underline', textAlign: 'center' },
   legalFooterSub: { fontSize: 10, color: 'rgba(255,255,255,0.12)', textAlign: 'center' },
+  versionRow: { marginTop: 12, alignItems: 'center', gap: 8 },
+  versionText: { fontSize: 9, color: 'rgba(255,255,255,0.1)', letterSpacing: 1 },
+  updateBtn: { paddingVertical: 8, paddingHorizontal: 16, borderWidth: 1, borderColor: 'rgba(14,224,229,0.2)', borderRadius: 20 },
+  updateBtnText: { fontSize: 11, color: 'rgba(14,224,229,0.5)' },
 
   // ── Modal consentement ──
   overlay: {

@@ -34,7 +34,14 @@
       ]
     ],
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "name": "RESET SOS",
+      "shortName": "RESET SOS",
+      "description": "Régulation émotionnelle sensorielle — Méthode RESET par Atypikali",
+      "themeColor": "#060084",
+      "backgroundColor": "#060084",
+      "output": "static",
+      "baseUrl": "/reset-sos"
     }
   }
 }
