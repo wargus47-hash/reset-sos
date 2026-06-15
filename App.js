@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Platform, LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import HomeScreen              from './src/screens/HomeScreen';
 import BriefingScreen          from './src/screens/BriefingScreen';
@@ -53,6 +54,7 @@ export default function App() {
   }, []);
 
   return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="Home"
@@ -80,5 +82,6 @@ export default function App() {
         <Stack.Screen name="Certification"     component={CertificationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
+    </GestureHandlerRootView>
   );
 }

@@ -28,12 +28,54 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Fix paths for GitHub Pages subdirectory
+      - name: Fix paths and inject PWA into HTML/JS
         run: |
-          # Les chemins absolus générés par Expo doivent inclure /reset-sos/
-          sed -i 's|src="/_expo/|src="/reset-sos/_expo/|g' dist/index.html
-          sed -i 's|href="/favicon\.ico"|href="/reset-sos/favicon.ico"|g' dist/index.html
-          sed -i 's|href="/assets/|href="/reset-sos/assets/|g' dist/index.html
+          python3 << 'PYEOF'
+          import re, glob, os
+
+          BASE = "/reset-sos"
+
+          # ── Patch index.html ──────────────────────────────────────────────
+          with open("dist/index.html", "r", encoding="utf-8") as f:
+              html = f.read()
+
+          html = html.replace('src="/_expo/',   f'src="{BASE}/_expo/')
+          html = html.replace('href="/favicon.ico"', f'href="{BASE}/favicon.ico"')
+          html = html.replace('href="/assets/', f'href="{BASE}/assets/')
+
+          pwa = f'''
+          <link rel="manifest" href="{BASE}/manifest.json" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          <meta name="apple-mobile-web-app-title" content="RESET SOS" />'''
+
+          sw = f'''<script>
+          if("serviceWorker"in navigator){{
+            window.addEventListener("load",function(){{
+              navigator.serviceWorker.register("{BASE}/sw.js",{{scope:"{BASE}/"}});
+            }});
+          }}
+          </script>'''
+
+          html = html.replace("</head>", pwa + "\n</head>")
+          html = html.replace("</body>", sw + "\n</body>")
+
+          with open("dist/index.html", "w", encoding="utf-8") as f:
+              f.write(html)
+
+          # ── Patch JS bundle : /assets/ → /reset-sos/assets/ ──────────────
+          for js_path in glob.glob("dist/_expo/static/js/web/*.js"):
+              with open(js_path, "r", encoding="utf-8") as f:
+                  js = f.read()
+              # Remplace les chemins absolus d'assets
+              js = js.replace('"/assets/', f'"{BASE}/assets/')
+              js = js.replace("'/assets/", f"'{BASE}/assets/")
+              with open(js_path, "w", encoding="utf-8") as f:
+                  f.write(js)
+              print(f"Patched: {js_path}")
+
+          print("All paths fixed.")
+          PYEOF
 
       - name: Add PWA files
         run: |

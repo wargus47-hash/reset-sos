@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
-  Animated, StatusBar, AppState,
+  Animated, StatusBar, AppState, Platform,
 } from 'react-native';
 import { Audio } from 'expo-av';
 import * as Haptics from 'expo-haptics';
@@ -61,10 +61,11 @@ export default function ListenScreen({ navigation, route }) {
         PHRASE_SOUNDS[index],
         {
           shouldPlay: true,
-          // Mode nuit : légèrement plus lent
-          rate:            isNight ? 0.88 : 1.0,
-          shouldCorrectPitch: true,
-          volume:          1.0,
+          volume: 1.0,
+          ...(Platform.OS !== 'web' && {
+            rate: isNight ? 0.88 : 1.0,
+            shouldCorrectPitch: true,
+          }),
         }
       );
       currentSound.current = sound;
@@ -125,11 +126,13 @@ export default function ListenScreen({ navigation, route }) {
   // ── Démarrage de la session ───────────────────────────────────────────────
   useEffect(() => {
     // Active la lecture audio même en mode silencieux (iOS)
-    Audio.setAudioModeAsync({
-      playsInSilentModeIOS:    true,
-      staysActiveInBackground: true,
-      shouldDuckAndroid:       false,
-    });
+    if (Platform.OS !== 'web') {
+      Audio.setAudioModeAsync({
+        playsInSilentModeIOS:    true,
+        staysActiveInBackground: true,
+        shouldDuckAndroid:       false,
+      });
+    }
 
     const startTimer = setTimeout(async () => {
       await playPhrase(0);

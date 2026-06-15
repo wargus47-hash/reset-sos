@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
-  Animated, StatusBar, SafeAreaView,
+  Animated, StatusBar, SafeAreaView, Platform,
 } from 'react-native';
 import { Audio } from 'expo-av';
 import * as Haptics from 'expo-haptics';
@@ -85,11 +85,13 @@ export default function CompanionScreen({ navigation }) {
 
   const startSession = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    Audio.setAudioModeAsync({
-      playsInSilentModeIOS:    true,
-      staysActiveInBackground: true,
-      shouldDuckAndroid:       false,
-    });
+    if (Platform.OS !== 'web') {
+      Audio.setAudioModeAsync({
+        playsInSilentModeIOS:    true,
+        staysActiveInBackground: true,
+        shouldDuckAndroid:       false,
+      });
+    }
     Animated.timing(bgOpacity, { toValue: 0, duration: 800, useNativeDriver: true })
       .start(() => {
         setPhase('session');
