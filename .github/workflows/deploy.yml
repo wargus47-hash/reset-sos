@@ -28,6 +28,13 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Fix paths for GitHub Pages subdirectory
+        run: |
+          # Les chemins absolus générés par Expo doivent inclure /reset-sos/
+          sed -i 's|src="/_expo/|src="/reset-sos/_expo/|g' dist/index.html
+          sed -i 's|href="/favicon\.ico"|href="/reset-sos/favicon.ico"|g' dist/index.html
+          sed -i 's|href="/assets/|href="/reset-sos/assets/|g' dist/index.html
+
       - name: Add PWA files
         run: |
           cp sw.js dist/
