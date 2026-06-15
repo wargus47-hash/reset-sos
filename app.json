@@ -40,7 +40,7 @@
       "description": "Régulation émotionnelle sensorielle — Méthode RESET par Atypikali",
       "themeColor": "#060084",
       "backgroundColor": "#060084",
-      "output": "static",
+      "output": "single",
       "baseUrl": "/reset-sos"
     }
   }
