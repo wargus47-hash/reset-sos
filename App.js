@@ -55,12 +55,12 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-    <NavigationContainer>
+    <NavigationContainer style={{ flex: 1 }}>
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{
           headerShown:      false,
-          cardStyle:        { backgroundColor: '#060084' },
+          cardStyle:        { backgroundColor: '#060084', flex: 1 },
           animationEnabled: true,
         }}
       >

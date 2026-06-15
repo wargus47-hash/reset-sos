@@ -146,7 +146,7 @@ export default function HomeScreen({ navigation }) {
         </View>
       </Modal>
 
-      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
 
         {/* Header logo */}
         <View style={styles.header}>
