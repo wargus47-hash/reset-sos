@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
   Animated, SafeAreaView, StatusBar, Linking, Image, ScrollView,
-  Modal, Platform,
+  Modal, Platform, useWindowDimensions,
 } from 'react-native';
 import { Colors } from '../theme/colors';
 import { hasGivenConsent, saveConsent } from '../storage/consent';
@@ -18,6 +18,7 @@ function isNightTime() {
 
 export default function HomeScreen({ navigation }) {
   const pulse     = useRef(new Animated.Value(1)).current;
+  const { height: windowHeight } = useWindowDimensions();
   const [night, setNight]           = useState(isNightTime());
   const [showConsent, setShowConsent] = useState(false);
   const [consentChecked, setConsentChecked] = useState(false);
@@ -52,7 +53,7 @@ export default function HomeScreen({ navigation }) {
   const goDiscreet = () => navigation.navigate('Briefing', { mode: 'discreet' });
 
   return (
-    <SafeAreaView style={[styles.safe, night && styles.safeNight]}>
+    <SafeAreaView style={[styles.safe, night && styles.safeNight, Platform.OS === 'web' && { height: windowHeight }]}>
       <StatusBar barStyle="light-content" backgroundColor={night ? '#000010' : Colors.darkBlue} />
 
       {/* ── Modal de consentement premier lancement ── */}
