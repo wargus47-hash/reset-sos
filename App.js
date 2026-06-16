@@ -60,7 +60,7 @@ export default function App() {
         initialRouteName="Home"
         screenOptions={{
           headerShown:      false,
-          cardStyle:        { backgroundColor: '#060084', flex: 1 },
+          cardStyle:        { backgroundColor: '#001A4D', flex: 1 },
           animationEnabled: true,
         }}
       >

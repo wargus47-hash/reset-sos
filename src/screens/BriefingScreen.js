@@ -100,7 +100,7 @@ export default function BriefingScreen({ navigation, route }) {
 
   return (
     <Animated.View style={[styles.root, { opacity: bgOpacity }]}>
-      <StatusBar barStyle="light-content" backgroundColor="#010030" />
+      <StatusBar barStyle="light-content" backgroundColor="#001A4D" />
       <SafeAreaView style={styles.safe}>
 
         {/* Barre de navigation + progression */}
@@ -188,7 +188,7 @@ export default function BriefingScreen({ navigation, route }) {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: '#010030',
+    backgroundColor: '#001A4D',
   },
   safe: {
     flex: 1,
@@ -204,12 +204,12 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 20,
-    backgroundColor: 'rgba(255,255,255,0.07)',
+    backgroundColor: 'rgba(253,250,244,0.07)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.12)',
+    borderColor: 'rgba(253,250,244,0.12)',
   },
   backText: {
-    color: 'rgba(255,255,255,0.55)',
+    color: 'rgba(253,250,244,0.55)',
     fontSize: 13,
     fontWeight: '600',
   },
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
   },
   step: {
     flex: 1, height: 3, borderRadius: 2,
-    backgroundColor: 'rgba(255,255,255,0.1)',
+    backgroundColor: 'rgba(253,250,244,0.1)',
   },
   stepDone:   { backgroundColor: Colors.turquoise },
   stepActive: { backgroundColor: Colors.pink },
@@ -252,27 +252,27 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
-    backgroundColor: 'rgba(255,255,255,0.05)',
+    backgroundColor: 'rgba(253,250,244,0.05)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.08)',
+    borderColor: 'rgba(253,250,244,0.08)',
     borderRadius: 16,
     padding: 16,
   },
   cardHighlight: {
-    backgroundColor: 'rgba(14,224,229,0.07)',
-    borderColor: 'rgba(14,224,229,0.3)',
+    backgroundColor: 'rgba(1,219,238,0.07)',
+    borderColor: 'rgba(1,219,238,0.3)',
   },
   cardIcon: {
     width: 44,
     height: 44,
     borderRadius: 12,
-    backgroundColor: 'rgba(14,224,229,0.1)',
+    backgroundColor: 'rgba(1,219,238,0.1)',
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,
   },
   cardIconHighlight: {
-    backgroundColor: 'rgba(14,224,229,0.2)',
+    backgroundColor: 'rgba(1,219,238,0.2)',
   },
   cardIconText: {
     fontSize: 20,
@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
   },
   mission: {
     fontSize: 14,
-    color: 'rgba(255,255,255,0.5)',
+    color: 'rgba(253,250,244,0.5)',
     lineHeight: 22,
     textAlign: 'center',
     paddingHorizontal: 8,
@@ -314,7 +314,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   ctaBtnLaunching: {
-    backgroundColor: 'rgba(14,224,229,0.3)',
+    backgroundColor: 'rgba(1,219,238,0.3)',
   },
   ctaBtnText: {
     color: Colors.darkBlue,

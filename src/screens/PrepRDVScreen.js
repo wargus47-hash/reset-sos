@@ -294,7 +294,7 @@ export default function PrepRDVScreen({ navigation }) {
                 {[1,2,3,4,5,6,7,8,9,10].map(n => (
                   <TouchableOpacity
                     key={n}
-                    style={[s.scoreSegment, { backgroundColor: motivation >= n ? motColor : 'rgba(255,255,255,0.08)' }]}
+                    style={[s.scoreSegment, { backgroundColor: motivation >= n ? motColor : 'rgba(253,250,244,0.08)' }]}
                     onPress={() => setMotivation(n)}
                     hitSlop={{ top: 8, bottom: 8 }}
                   />
@@ -335,16 +335,16 @@ const s = StyleSheet.create({
   body:  { padding: 16, gap: 16, paddingBottom: 48 },
 
   topRow:   { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  backBtn:  { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(255,255,255,0.07)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)' },
-  backText: { color: 'rgba(255,255,255,0.55)', fontSize: 13, fontWeight: '600' },
-  badge:    { backgroundColor: 'rgba(14,224,229,0.1)', borderRadius: 8, paddingHorizontal: 10, paddingVertical: 4, borderWidth: 1, borderColor: 'rgba(14,224,229,0.3)' },
+  backBtn:  { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(253,250,244,0.07)', borderWidth: 1, borderColor: 'rgba(253,250,244,0.12)' },
+  backText: { color: 'rgba(253,250,244,0.55)', fontSize: 13, fontWeight: '600' },
+  badge:    { backgroundColor: 'rgba(1,219,238,0.1)', borderRadius: 8, paddingHorizontal: 10, paddingVertical: 4, borderWidth: 1, borderColor: 'rgba(1,219,238,0.3)' },
   badgeText:{ color: Colors.turquoise, fontSize: 9, fontWeight: '700', letterSpacing: 1.5 },
 
   progressRow:    { flexDirection: 'row', gap: 5 },
-  progressSegment:{ flex: 1, height: 4, borderRadius: 2, backgroundColor: 'rgba(255,255,255,0.1)' },
+  progressSegment:{ flex: 1, height: 4, borderRadius: 2, backgroundColor: 'rgba(253,250,244,0.1)' },
 
   stepsRow: { flexDirection: 'row', gap: 5, flexWrap: 'wrap' },
-  stepChip: { fontSize: 9, color: 'rgba(255,255,255,0.25)', letterSpacing: 0.5 },
+  stepChip: { fontSize: 9, color: 'rgba(253,250,244,0.25)', letterSpacing: 0.5 },
   stepChipActive: { color: Colors.turquoise, fontWeight: '700' },
 
   stepCard:  { gap: 14 },
@@ -353,18 +353,18 @@ const s = StyleSheet.create({
 
   field:      { gap: 7 },
   fieldLabel: { fontSize: 10, color: Colors.gray, letterSpacing: 1.5, fontWeight: '700' },
-  input:      { backgroundColor: 'rgba(255,255,255,0.05)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)', borderRadius: 12, padding: 13, color: Colors.white, fontSize: 14, minHeight: 60, textAlignVertical: 'top' },
+  input:      { backgroundColor: 'rgba(253,250,244,0.05)', borderWidth: 1, borderColor: 'rgba(253,250,244,0.1)', borderRadius: 12, padding: 13, color: Colors.white, fontSize: 14, minHeight: 60, textAlignVertical: 'top' },
 
   choiceGroup:      { gap: 8 },
-  choiceBtn:        { padding: 14, borderRadius: 12, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.04)', alignItems: 'center' },
-  choiceBtnYes:     { borderColor: 'rgba(14,224,229,0.45)', backgroundColor: 'rgba(14,224,229,0.08)' },
-  choiceBtnNo:      { borderColor: 'rgba(219,0,115,0.4)', backgroundColor: 'rgba(219,0,115,0.07)' },
+  choiceBtn:        { padding: 14, borderRadius: 12, borderWidth: 1, borderColor: 'rgba(253,250,244,0.1)', backgroundColor: 'rgba(253,250,244,0.04)', alignItems: 'center' },
+  choiceBtnYes:     { borderColor: 'rgba(1,219,238,0.45)', backgroundColor: 'rgba(1,219,238,0.08)' },
+  choiceBtnNo:      { borderColor: 'rgba(218,142,69,0.4)', backgroundColor: 'rgba(218,142,69,0.07)' },
   choiceBtnText:    { color: Colors.gray, fontSize: 13, fontWeight: '600' },
 
-  warningBox:  { padding: 12, backgroundColor: 'rgba(219,0,115,0.07)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(219,0,115,0.25)' },
+  warningBox:  { padding: 12, backgroundColor: 'rgba(218,142,69,0.07)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(218,142,69,0.25)' },
   warningText: { color: 'rgba(255,180,180,0.9)', fontSize: 12, lineHeight: 20 },
-  infoBox:     { padding: 12, backgroundColor: 'rgba(14,224,229,0.06)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(14,224,229,0.2)' },
-  infoText:    { color: 'rgba(255,255,255,0.5)', fontSize: 12, lineHeight: 19 },
+  infoBox:     { padding: 12, backgroundColor: 'rgba(1,219,238,0.06)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(1,219,238,0.2)' },
+  infoText:    { color: 'rgba(253,250,244,0.5)', fontSize: 12, lineHeight: 19 },
 
   scoreDisplay: { flexDirection: 'row', alignItems: 'flex-end', gap: 6, justifyContent: 'center', paddingVertical: 8 },
   scoreNum:     { fontSize: 56, fontWeight: '700' },
@@ -377,14 +377,14 @@ const s = StyleSheet.create({
   nextBtnText: { color: Colors.darkBlue, fontSize: 16, fontWeight: '700' },
 
   // ── Résumé ──
-  summaryCard:   { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 16, borderWidth: 1, borderColor: 'rgba(14,224,229,0.2)', padding: 18, gap: 0 },
-  summaryHeader: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 14, borderBottomWidth: 1, borderBottomColor: 'rgba(255,255,255,0.08)', marginBottom: 14 },
-  summaryCheck:  { width: 32, height: 32, borderRadius: 16, backgroundColor: 'rgba(14,224,229,0.15)', textAlign: 'center', lineHeight: 32, color: Colors.turquoise, fontSize: 16, fontWeight: '700' },
+  summaryCard:   { backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 16, borderWidth: 1, borderColor: 'rgba(1,219,238,0.2)', padding: 18, gap: 0 },
+  summaryHeader: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 14, borderBottomWidth: 1, borderBottomColor: 'rgba(253,250,244,0.08)', marginBottom: 14 },
+  summaryCheck:  { width: 32, height: 32, borderRadius: 16, backgroundColor: 'rgba(1,219,238,0.15)', textAlign: 'center', lineHeight: 32, color: Colors.turquoise, fontSize: 16, fontWeight: '700' },
   summaryTitle:  { color: Colors.white, fontSize: 18, fontWeight: '700' },
-  summaryRow:    { paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: 'rgba(255,255,255,0.06)', gap: 4 },
+  summaryRow:    { paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: 'rgba(253,250,244,0.06)', gap: 4 },
   summaryLabel:  { fontSize: 9, color: Colors.gray, letterSpacing: 1.5, fontWeight: '700' },
   summaryValue:  { color: Colors.white, fontSize: 14, lineHeight: 21 },
   summaryMeta:   { fontSize: 12 },
-  resetBtn:      { backgroundColor: 'rgba(255,255,255,0.06)', padding: 14, borderRadius: 12, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)' },
-  resetBtnText:  { color: 'rgba(255,255,255,0.45)', fontSize: 14, fontWeight: '600' },
+  resetBtn:      { backgroundColor: 'rgba(253,250,244,0.06)', padding: 14, borderRadius: 12, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(253,250,244,0.1)' },
+  resetBtnText:  { color: 'rgba(253,250,244,0.45)', fontSize: 14, fontWeight: '600' },
 });

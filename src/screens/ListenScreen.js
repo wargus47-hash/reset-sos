@@ -194,10 +194,10 @@ export default function ListenScreen({ navigation, route }) {
     navigation.navigate('Result', { mode, durationSec: seconds, preLabel });
   };
 
-  const orbColor = isNight ? '#2244AA' : isDiscreet ? Colors.purple : Colors.turquoise;
+  const orbColor = isNight ? '#002FA7' : isDiscreet ? Colors.purple : Colors.turquoise;
 
   return (
-    <View style={[styles.container, isNight && { backgroundColor: '#000008' }]}>
+    <View style={[styles.container, isNight && { backgroundColor: '#000820' }]}>
       <StatusBar barStyle="light-content" backgroundColor="#000" />
 
       {/* Bouton stop */}
@@ -262,7 +262,7 @@ export default function ListenScreen({ navigation, route }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000',
+    backgroundColor: '#000D26',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 40,
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   stopBtnText: {
-    color: 'rgba(255,255,255,0.22)',
+    color: 'rgba(253,250,244,0.22)',
     fontSize: 18,
   },
   orb: {
@@ -286,7 +286,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     backgroundColor: 'transparent',
     borderWidth: 1,
-    borderColor: 'rgba(14,224,229,0.25)',
+    borderColor: 'rgba(1,219,238,0.25)',
     shadowColor: Colors.turquoise,
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.4,
@@ -294,7 +294,7 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   phrase: {
-    color: 'rgba(255,255,255,0.88)',
+    color: 'rgba(253,250,244,0.88)',
     fontSize: 20,
     fontWeight: '600',
     textAlign: 'center',
@@ -303,7 +303,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
   },
   timer: {
-    color: 'rgba(255,255,255,0.18)',
+    color: 'rgba(253,250,244,0.18)',
     fontSize: 13,
     letterSpacing: 3,
   },
@@ -313,11 +313,11 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     paddingHorizontal: 32,
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.15)',
+    borderColor: 'rgba(253,250,244,0.15)',
     borderRadius: 30,
   },
   endBtnText: {
-    color: 'rgba(255,255,255,0.4)',
+    color: 'rgba(253,250,244,0.4)',
     fontSize: 13,
     letterSpacing: 1,
   },
@@ -329,11 +329,11 @@ const styles = StyleSheet.create({
   modeBadgeText: { fontSize: 10, fontWeight: '700', letterSpacing: 1.5 },
   returnMsg: {
     position: 'absolute', top: 100,
-    color: 'rgba(255,255,255,0.35)',
+    color: 'rgba(253,250,244,0.35)',
     fontSize: 13, fontStyle: 'italic',
   },
   discreetMsg: {
-    color: 'rgba(255,255,255,0.12)',
+    color: 'rgba(253,250,244,0.12)',
     fontSize: 32, letterSpacing: 12,
   },
 });

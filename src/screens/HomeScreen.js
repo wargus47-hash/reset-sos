@@ -54,7 +54,7 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <SafeAreaView style={[styles.safe, night && styles.safeNight, Platform.OS === 'web' && { height: windowHeight }]}>
-      <StatusBar barStyle="light-content" backgroundColor={night ? '#000010' : Colors.darkBlue} />
+      <StatusBar barStyle="light-content" backgroundColor={night ? '#000820' : Colors.darkBlue} />
 
       {/* ── Modal de consentement premier lancement ── */}
       <Modal
@@ -189,7 +189,7 @@ export default function HomeScreen({ navigation }) {
         {/* Grille des modes */}
         <View style={styles.modeGrid}>
           <TouchableOpacity
-            style={[styles.modeCard, { borderColor: 'rgba(128,0,128,0.3)' }]}
+            style={[styles.modeCard, { borderColor: 'rgba(0,47,167,0.3)' }]}
             onPress={goDiscreet}
             activeOpacity={0.75}
           >
@@ -199,7 +199,7 @@ export default function HomeScreen({ navigation }) {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={[styles.modeCard, { borderColor: 'rgba(128,0,128,0.3)' }]}
+            style={[styles.modeCard, { borderColor: 'rgba(0,47,167,0.3)' }]}
             onPress={() => navigation.navigate('Companion')}
             activeOpacity={0.75}
           >
@@ -223,7 +223,7 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate('Practitioners')}
             activeOpacity={0.75}
           >
-            <View style={[styles.menuIcon, { backgroundColor: 'rgba(14,224,229,0.15)' }]}>
+            <View style={[styles.menuIcon, { backgroundColor: 'rgba(1,219,238,0.15)' }]}>
               <Text style={styles.menuIconEmoji}>🎯</Text>
             </View>
             <View style={styles.menuTextBlock}>
@@ -238,7 +238,7 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate('Journal')}
             activeOpacity={0.75}
           >
-            <View style={[styles.menuIcon, { backgroundColor: 'rgba(128,0,128,0.2)' }]}>
+            <View style={[styles.menuIcon, { backgroundColor: 'rgba(0,47,167,0.2)' }]}>
               <Text style={styles.menuIconEmoji}>📓</Text>
             </View>
             <View style={styles.menuTextBlock}>
@@ -253,7 +253,7 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate('PractitionerMode')}
             activeOpacity={0.75}
           >
-            <View style={[styles.menuIcon, { backgroundColor: 'rgba(219,0,115,0.15)' }]}>
+            <View style={[styles.menuIcon, { backgroundColor: 'rgba(218,142,69,0.15)' }]}>
               <Text style={styles.menuIconEmoji}>📋</Text>
             </View>
             <View style={styles.menuTextBlock}>
@@ -268,7 +268,7 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate('Comprendre')}
             activeOpacity={0.75}
           >
-            <View style={[styles.menuIcon, { backgroundColor: 'rgba(14,224,229,0.1)' }]}>
+            <View style={[styles.menuIcon, { backgroundColor: 'rgba(1,219,238,0.1)' }]}>
               <Text style={styles.menuIconEmoji}>📖</Text>
             </View>
             <View style={styles.menuTextBlock}>
@@ -283,7 +283,7 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate('BilanEmotionnel')}
             activeOpacity={0.75}
           >
-            <View style={[styles.menuIcon, { backgroundColor: 'rgba(128,0,128,0.2)' }]}>
+            <View style={[styles.menuIcon, { backgroundColor: 'rgba(0,47,167,0.2)' }]}>
               <Text style={styles.menuIconEmoji}>🗺️</Text>
             </View>
             <View style={styles.menuTextBlock}>
@@ -298,7 +298,7 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate('SurvivalQuiz')}
             activeOpacity={0.75}
           >
-            <View style={[styles.menuIcon, { backgroundColor: 'rgba(219,0,115,0.12)' }]}>
+            <View style={[styles.menuIcon, { backgroundColor: 'rgba(218,142,69,0.12)' }]}>
               <Text style={styles.menuIconEmoji}>🧬</Text>
             </View>
             <View style={styles.menuTextBlock}>
@@ -358,61 +358,61 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   safe:         { flex: 1, backgroundColor: Colors.darkBlue },
-  safeNight:    { backgroundColor: '#000010' },
+  safeNight:    { backgroundColor: '#000820' },
   scroll:       { padding: 0, paddingBottom: 32 },
   header:       { paddingHorizontal: 24, paddingTop: 12, paddingBottom: 0, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   logoImg:      { width: 140, height: 90 },
-  nightBadge:   { backgroundColor: 'rgba(0,0,80,0.6)', borderRadius: 8, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: 'rgba(100,100,200,0.3)' },
-  nightBadgeText:{ color: '#8899FF', fontSize: 9, fontWeight: '700', letterSpacing: 1.5 },
+  nightBadge:   { backgroundColor: 'rgba(0,13,38,0.6)', borderRadius: 8, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: 'rgba(100,100,200,0.3)' },
+  nightBadgeText:{ color: '#C7E6F0', fontSize: 9, fontWeight: '700', letterSpacing: 1.5 },
   heroArea:     { alignItems: 'center', paddingVertical: 24 },
   sosBtn:       { width: 180, height: 180, borderRadius: 90, backgroundColor: Colors.pink, alignItems: 'center', justifyContent: 'center' },
-  sosBtnNight:  { backgroundColor: '#1a1a5e', borderWidth: 1, borderColor: 'rgba(100,100,200,0.4)' },
+  sosBtnNight:  { backgroundColor: '#001030', borderWidth: 1, borderColor: 'rgba(100,100,200,0.4)' },
   sosBtnIcon:   { fontSize: 28, marginBottom: 4 },
   sosBtnLabel:  { color: Colors.white, fontSize: 14, fontWeight: '700', letterSpacing: 1.5, textAlign: 'center', lineHeight: 21 },
   dividerRow:   { flexDirection: 'row', alignItems: 'center', marginHorizontal: 24, gap: 10, marginBottom: 14 },
-  dividerLine:  { flex: 1, height: 1, backgroundColor: 'rgba(255,255,255,0.08)' },
+  dividerLine:  { flex: 1, height: 1, backgroundColor: 'rgba(253,250,244,0.08)' },
   dividerText:  { fontSize: 10, color: Colors.gray, letterSpacing: 1 },
   modeGrid:     { flexDirection: 'row', gap: 10, paddingHorizontal: 24, marginBottom: 20 },
-  modeCard:     { flex: 1, padding: 14, backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 14, borderWidth: 1, alignItems: 'center', gap: 4 },
+  modeCard:     { flex: 1, padding: 14, backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 14, borderWidth: 1, alignItems: 'center', gap: 4 },
   modeIcon:     { fontSize: 24 },
   modeTitle:    { color: Colors.white, fontSize: 12, fontWeight: '700', textAlign: 'center' },
   modeSub:      { color: Colors.gray, fontSize: 10, textAlign: 'center' },
   menuList:     { paddingHorizontal: 24, gap: 8, marginBottom: 20 },
-  menuBtn:      { flexDirection: 'row', alignItems: 'center', gap: 14, padding: 14, backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: 14, borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)' },
+  menuBtn:      { flexDirection: 'row', alignItems: 'center', gap: 14, padding: 14, backgroundColor: 'rgba(253,250,244,0.05)', borderRadius: 14, borderWidth: 1, borderColor: 'rgba(253,250,244,0.08)' },
   menuIcon:     { width: 40, height: 40, borderRadius: 11, alignItems: 'center', justifyContent: 'center' },
   menuIconEmoji:{ fontSize: 18 },
   menuTextBlock:{ flex: 1 },
   menuTitle:    { color: Colors.white, fontSize: 13, fontWeight: '600' },
   menuSub:      { color: Colors.gray, fontSize: 11, marginTop: 2 },
   menuChevron:  { color: Colors.gray, fontSize: 20 },
-  bottomBanner: { marginHorizontal: 24, padding: 12, backgroundColor: 'rgba(14,224,229,0.07)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(14,224,229,0.2)' },
+  bottomBanner: { marginHorizontal: 24, padding: 12, backgroundColor: 'rgba(1,219,238,0.07)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(1,219,238,0.2)' },
   bottomBannerText:{ fontSize: 11, color: Colors.gray, textAlign: 'center' },
   bottomBannerLink:{ color: Colors.turquoise },
 
   // ── Footer légal ──
   legalFooter: { marginHorizontal: 24, marginTop: 12, alignItems: 'center', gap: 4, paddingBottom: 8 },
-  legalFooterLink: { fontSize: 10, color: 'rgba(255,255,255,0.2)', textDecorationLine: 'underline', textAlign: 'center' },
-  legalFooterSub: { fontSize: 10, color: 'rgba(255,255,255,0.12)', textAlign: 'center' },
+  legalFooterLink: { fontSize: 10, color: 'rgba(253,250,244,0.2)', textDecorationLine: 'underline', textAlign: 'center' },
+  legalFooterSub: { fontSize: 10, color: 'rgba(253,250,244,0.12)', textAlign: 'center' },
   versionRow: { marginTop: 12, alignItems: 'center', gap: 8 },
-  versionText: { fontSize: 9, color: 'rgba(255,255,255,0.1)', letterSpacing: 1 },
-  updateBtn: { paddingVertical: 8, paddingHorizontal: 16, borderWidth: 1, borderColor: 'rgba(14,224,229,0.2)', borderRadius: 20 },
-  updateBtnText: { fontSize: 11, color: 'rgba(14,224,229,0.5)' },
+  versionText: { fontSize: 9, color: 'rgba(253,250,244,0.1)', letterSpacing: 1 },
+  updateBtn: { paddingVertical: 8, paddingHorizontal: 16, borderWidth: 1, borderColor: 'rgba(1,219,238,0.2)', borderRadius: 20 },
+  updateBtnText: { fontSize: 11, color: 'rgba(1,219,238,0.5)' },
 
   // ── Modal consentement ──
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.85)',
+    backgroundColor: 'rgba(0,13,38,0.85)',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
   },
   consentCard: {
     width: '100%',
-    backgroundColor: '#0a0060',
+    backgroundColor: '#000D3A',
     borderRadius: 24,
     padding: 24,
     borderWidth: 1,
-    borderColor: 'rgba(14,224,229,0.25)',
+    borderColor: 'rgba(1,219,238,0.25)',
     gap: 16,
     maxHeight: '90%',
   },
@@ -483,14 +483,14 @@ const styles = StyleSheet.create({
   consentPoints: { gap: 8 },
   consentPointRow: { flexDirection: 'row', gap: 10, alignItems: 'flex-start' },
   consentPointDot: { color: Colors.turquoise, fontSize: 12, fontWeight: '700', marginTop: 1 },
-  consentPointText: { flex: 1, color: 'rgba(255,255,255,0.6)', fontSize: 12, lineHeight: 18 },
+  consentPointText: { flex: 1, color: 'rgba(253,250,244,0.6)', fontSize: 12, lineHeight: 18 },
   consentCheckRow: { flexDirection: 'row', gap: 12, alignItems: 'flex-start' },
   consentCheckBox: {
     width: 22,
     height: 22,
     borderRadius: 6,
     borderWidth: 1.5,
-    borderColor: 'rgba(255,255,255,0.25)',
+    borderColor: 'rgba(253,250,244,0.25)',
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,
@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.turquoise,
   },
   consentCheckMark: { color: Colors.darkBlue, fontSize: 13, fontWeight: '800' },
-  consentCheckLabel: { flex: 1, color: 'rgba(255,255,255,0.65)', fontSize: 12, lineHeight: 19 },
+  consentCheckLabel: { flex: 1, color: 'rgba(253,250,244,0.65)', fontSize: 12, lineHeight: 19 },
   consentCheckLink: { color: Colors.turquoise, textDecorationLine: 'underline' },
   consentBtn: {
     backgroundColor: Colors.turquoise,
@@ -510,7 +510,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   consentBtnDisabled: {
-    backgroundColor: 'rgba(14,224,229,0.2)',
+    backgroundColor: 'rgba(1,219,238,0.2)',
   },
   consentBtnText: {
     color: Colors.darkBlue,
@@ -519,6 +519,6 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   consentBtnTextDisabled: {
-    color: 'rgba(14,224,229,0.4)',
+    color: 'rgba(1,219,238,0.4)',
   },
 });

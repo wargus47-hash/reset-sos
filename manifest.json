@@ -6,8 +6,8 @@
   "scope": "/reset-sos/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#060084",
-  "theme_color": "#060084",
+  "background_color": "#001A4D",
+  "theme_color": "#001A4D",
   "icons": [
     {
       "src": "/reset-sos/assets/logo_reset.png",

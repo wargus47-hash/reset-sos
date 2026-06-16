@@ -323,20 +323,20 @@ export default function SurvivalQuizScreen({ navigation }) {
 const s = StyleSheet.create({
   safe:      { flex: 1, backgroundColor: Colors.darkBlue },
   header:    { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 16 },
-  back:      { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(255,255,255,0.07)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)', minWidth: 70 },
-  backText:  { color: 'rgba(255,255,255,0.55)', fontSize: 13, fontWeight: '600' },
-  badge:     { backgroundColor: 'rgba(14,224,229,0.1)', borderRadius: 8, paddingHorizontal: 10, paddingVertical: 4, borderWidth: 1, borderColor: 'rgba(14,224,229,0.3)' },
+  back:      { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(253,250,244,0.07)', borderWidth: 1, borderColor: 'rgba(253,250,244,0.12)', minWidth: 70 },
+  backText:  { color: 'rgba(253,250,244,0.55)', fontSize: 13, fontWeight: '600' },
+  badge:     { backgroundColor: 'rgba(1,219,238,0.1)', borderRadius: 8, paddingHorizontal: 10, paddingVertical: 4, borderWidth: 1, borderColor: 'rgba(1,219,238,0.3)' },
   badgeText: { color: Colors.turquoise, fontSize: 9, fontWeight: '700', letterSpacing: 1.5 },
   qCounter:  { color: Colors.gray, fontSize: 12, fontWeight: '600', minWidth: 40, textAlign: 'right' },
 
-  progressBg:   { height: 3, backgroundColor: 'rgba(255,255,255,0.08)', marginHorizontal: 16, borderRadius: 2 },
+  progressBg:   { height: 3, backgroundColor: 'rgba(253,250,244,0.08)', marginHorizontal: 16, borderRadius: 2 },
   progressFill: { height: '100%', backgroundColor: Colors.turquoise, borderRadius: 2 },
 
   body:         { padding: 20, gap: 20, paddingBottom: 48 },
   scenarioText: { color: Colors.white, fontSize: 18, fontWeight: '700', lineHeight: 27 },
 
   answersBlock: { gap: 10 },
-  answerBtn:    { flexDirection: 'row', alignItems: 'flex-start', gap: 12, padding: 14, borderRadius: 13, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.04)' },
+  answerBtn:    { flexDirection: 'row', alignItems: 'flex-start', gap: 12, padding: 14, borderRadius: 13, borderWidth: 1, borderColor: 'rgba(253,250,244,0.1)', backgroundColor: 'rgba(253,250,244,0.04)' },
   answerDot:    { width: 8, height: 8, borderRadius: 4, marginTop: 6, flexShrink: 0 },
   answerText:   { flex: 1, color: Colors.gray, fontSize: 13, lineHeight: 20 },
 
@@ -345,11 +345,11 @@ const s = StyleSheet.create({
 
   // ── Résultats ──
   sectionLabel:  { fontSize: 10, color: Colors.gray, letterSpacing: 1.5, fontWeight: '700' },
-  dominantCard:  { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 16, borderWidth: 1, padding: 20, gap: 10, alignItems: 'center' },
+  dominantCard:  { backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 16, borderWidth: 1, padding: 20, gap: 10, alignItems: 'center' },
   dominantEmoji: { fontSize: 40 },
   dominantLabel: { fontSize: 10, color: Colors.gray, letterSpacing: 1.5, fontWeight: '700' },
   dominantName:  { fontSize: 26, fontWeight: '700' },
-  dominantDesc:  { color: 'rgba(255,255,255,0.65)', fontSize: 13, lineHeight: 21, textAlign: 'center' },
+  dominantDesc:  { color: 'rgba(253,250,244,0.65)', fontSize: 13, lineHeight: 21, textAlign: 'center' },
   tipBox:        { width: '100%', padding: 12, borderRadius: 12, borderWidth: 1, gap: 4 },
   tipLabel:      { fontSize: 9, color: Colors.gray, letterSpacing: 1.5, fontWeight: '700' },
   tipText:       { fontSize: 12, lineHeight: 19 },
@@ -359,15 +359,15 @@ const s = StyleSheet.create({
   stratLabelRow:  { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   stratLabel:     { fontSize: 13, fontWeight: '700' },
   stratCount:     { color: Colors.gray, fontSize: 11 },
-  stratBarBg:     { height: 8, backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: 4, overflow: 'hidden' },
+  stratBarBg:     { height: 8, backgroundColor: 'rgba(253,250,244,0.08)', borderRadius: 4, overflow: 'hidden' },
   stratBarFill:   { height: '100%', borderRadius: 4 },
 
-  stratDetailCard:   { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(255,255,255,0.07)', padding: 13, gap: 6 },
+  stratDetailCard:   { backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(253,250,244,0.07)', padding: 13, gap: 6 },
   stratDetailHeader: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   stratDetailEmoji:  { fontSize: 18 },
   stratDetailName:   { fontSize: 14, fontWeight: '700' },
   stratDetailDesc:   { color: Colors.gray, fontSize: 12, lineHeight: 19 },
 
-  restartBtn:     { padding: 13, backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: 12, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)' },
-  restartBtnText: { color: 'rgba(255,255,255,0.4)', fontSize: 13, fontWeight: '600' },
+  restartBtn:     { padding: 13, backgroundColor: 'rgba(253,250,244,0.05)', borderRadius: 12, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(253,250,244,0.08)' },
+  restartBtnText: { color: 'rgba(253,250,244,0.4)', fontSize: 13, fontWeight: '600' },
 });

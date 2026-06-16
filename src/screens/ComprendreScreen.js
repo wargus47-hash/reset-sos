@@ -163,11 +163,11 @@ function Accordion({ title, icon, color, children, defaultOpen = false }) {
   );
 }
 const acc = StyleSheet.create({
-  wrap:    { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 14, borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)', overflow: 'hidden' },
+  wrap:    { backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 14, borderWidth: 1, borderColor: 'rgba(253,250,244,0.08)', overflow: 'hidden' },
   header:  { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 16 },
   icon:    { fontSize: 22 },
   title:   { flex: 1, fontSize: 14, fontWeight: '700', color: Colors.white },
-  chevron: { color: 'rgba(255,255,255,0.25)', fontSize: 10 },
+  chevron: { color: 'rgba(253,250,244,0.25)', fontSize: 10 },
   body:    { paddingHorizontal: 16, paddingBottom: 16, gap: 10 },
 });
 
@@ -277,7 +277,7 @@ function TabMethode({ onGoToPractitioners }) {
             <Text style={styles.stepText}>{h.text}</Text>
           </View>
         ))}
-        <View style={[styles.quoteBox, { borderColor: 'rgba(14,224,229,0.3)', backgroundColor: 'rgba(14,224,229,0.06)' }]}>
+        <View style={[styles.quoteBox, { borderColor: 'rgba(1,219,238,0.3)', backgroundColor: 'rgba(1,219,238,0.06)' }]}>
           <Text style={[styles.quoteText, { color: Colors.turquoise }]}>
             "La charge émotionnelle est régulée, la mémoire du traumatisme libérée — et c'est définitif."
           </Text>
@@ -455,7 +455,7 @@ function TabIE() {
                 {[1, 2, 3, 4, 5].map(n => (
                   <TouchableOpacity
                     key={n}
-                    style={[styles.ieScoreDot, { backgroundColor: score >= n ? dim.color : 'rgba(255,255,255,0.08)' }]}
+                    style={[styles.ieScoreDot, { backgroundColor: score >= n ? dim.color : 'rgba(253,250,244,0.08)' }]}
                     onPress={() => setScores(s => ({ ...s, [dim.id]: n }))}
                     hitSlop={{ top: 8, bottom: 8 }}
                   />
@@ -566,7 +566,7 @@ function TabExercice() {
           </Text>
         </View>
 
-        <View style={[styles.quoteBox, { borderColor: 'rgba(14,224,229,0.3)', backgroundColor: 'rgba(14,224,229,0.06)' }]}>
+        <View style={[styles.quoteBox, { borderColor: 'rgba(1,219,238,0.3)', backgroundColor: 'rgba(1,219,238,0.06)' }]}>
           <Text style={[styles.quoteText, { color: Colors.turquoise }]}>
             Une émotion = une réaction physique directe.{'\n'}
             Une interprétation = une histoire ou un sens qu'on donne à un événement.
@@ -626,7 +626,7 @@ function TabExercice() {
       <View style={styles.gameChoices}>
         <TouchableOpacity
           style={[styles.gameChoiceBtn,
-            selected === 'emotion' && { borderColor: Colors.turquoise + '80', backgroundColor: 'rgba(14,224,229,0.12)' }
+            selected === 'emotion' && { borderColor: Colors.turquoise + '80', backgroundColor: 'rgba(1,219,238,0.12)' }
           ]}
           onPress={() => choose(true)}
           activeOpacity={0.8}
@@ -637,7 +637,7 @@ function TabExercice() {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.gameChoiceBtn,
-            selected === 'interpretation' && { borderColor: Colors.pink + '80', backgroundColor: 'rgba(219,0,115,0.1)' }
+            selected === 'interpretation' && { borderColor: Colors.pink + '80', backgroundColor: 'rgba(218,142,69,0.1)' }
           ]}
           onPress={() => choose(false)}
           activeOpacity={0.8}
@@ -725,40 +725,40 @@ export default function ComprendreScreen({ navigation }) {
 const styles = StyleSheet.create({
   safe:        { flex: 1, backgroundColor: Colors.darkBlue },
   topBar:      { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, paddingVertical: 12 },
-  backBtn:     { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(255,255,255,0.07)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)', width: 70 },
-  backText:    { color: 'rgba(255,255,255,0.55)', fontSize: 13, fontWeight: '600' },
+  backBtn:     { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(253,250,244,0.07)', borderWidth: 1, borderColor: 'rgba(253,250,244,0.12)', width: 70 },
+  backText:    { color: 'rgba(253,250,244,0.55)', fontSize: 13, fontWeight: '600' },
   screenTitle: { color: Colors.white, fontSize: 15, fontWeight: '700' },
 
   tabs:          { flexDirection: 'row', marginHorizontal: 16, gap: 6, marginBottom: 4 },
-  tab:           { flex: 1, paddingVertical: 9, borderRadius: 10, borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.03)' },
-  tabActive:     { backgroundColor: 'rgba(14,224,229,0.1)', borderColor: Colors.turquoise },
+  tab:           { flex: 1, paddingVertical: 9, borderRadius: 10, borderWidth: 1, borderColor: 'rgba(253,250,244,0.08)', alignItems: 'center', backgroundColor: 'rgba(253,250,244,0.03)' },
+  tabActive:     { backgroundColor: 'rgba(1,219,238,0.1)', borderColor: Colors.turquoise },
   tabText:       { color: Colors.gray, fontSize: 11, fontWeight: '600' },
   tabTextActive: { color: Colors.turquoise },
 
   tabBody: { padding: 16, gap: 12, paddingBottom: 48 },
 
   // ── Intro ──
-  introCard:      { backgroundColor: 'rgba(14,224,229,0.07)', borderWidth: 1, borderColor: 'rgba(14,224,229,0.2)', borderRadius: 14, padding: 14 },
-  introText:      { color: 'rgba(255,255,255,0.75)', fontSize: 13, lineHeight: 22 },
+  introCard:      { backgroundColor: 'rgba(1,219,238,0.07)', borderWidth: 1, borderColor: 'rgba(1,219,238,0.2)', borderRadius: 14, padding: 14 },
+  introText:      { color: 'rgba(253,250,244,0.75)', fontSize: 13, lineHeight: 22 },
   introHighlight: { color: Colors.turquoise, fontWeight: '700' },
 
   // ── Sections ──
   sectionNote:  { color: Colors.gray, fontSize: 12, lineHeight: 19, marginBottom: 4 },
 
   compareRow:   { flexDirection: 'row', gap: 8 },
-  compareCard:  { flex: 1, backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 10, borderWidth: 1, padding: 12, gap: 6 },
+  compareCard:  { flex: 1, backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 10, borderWidth: 1, padding: 12, gap: 6 },
   compareTitle: { fontSize: 12, fontWeight: '700', letterSpacing: 0.5 },
   compareText:  { color: Colors.gray, fontSize: 11, lineHeight: 17 },
 
-  quoteBox:     { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 10, padding: 12, borderLeftWidth: 2, borderLeftColor: 'rgba(255,255,255,0.2)' },
-  quoteText:    { color: 'rgba(255,255,255,0.6)', fontSize: 12, fontStyle: 'italic', lineHeight: 19 },
+  quoteBox:     { backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 10, padding: 12, borderLeftWidth: 2, borderLeftColor: 'rgba(253,250,244,0.2)' },
+  quoteText:    { color: 'rgba(253,250,244,0.6)', fontSize: 12, fontStyle: 'italic', lineHeight: 19 },
 
   emotionRow:   { flexDirection: 'row', alignItems: 'flex-start', gap: 12, paddingLeft: 10, borderLeftWidth: 2 },
   emotionEmoji: { fontSize: 22, marginTop: 2 },
   emotionName:  { fontSize: 13, fontWeight: '700' },
   emotionDesc:  { color: Colors.gray, fontSize: 11, lineHeight: 17, marginTop: 2 },
 
-  responseCard:   { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 12, borderWidth: 1, padding: 14, gap: 8 },
+  responseCard:   { backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 12, borderWidth: 1, padding: 14, gap: 8 },
   responseHeader: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   responseEmoji:  { fontSize: 20 },
   responseName:   { fontSize: 14, fontWeight: '700' },
@@ -766,52 +766,52 @@ const styles = StyleSheet.create({
   signsList:      { gap: 4 },
   signItem:       { flexDirection: 'row', gap: 6 },
   signDot:        { fontSize: 16, lineHeight: 18 },
-  signText:       { color: 'rgba(255,255,255,0.55)', fontSize: 11, flex: 1 },
+  signText:       { color: 'rgba(253,250,244,0.55)', fontSize: 11, flex: 1 },
 
-  whyCard:    { backgroundColor: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: 12, gap: 6 },
+  whyCard:    { backgroundColor: 'rgba(253,250,244,0.03)', borderRadius: 10, padding: 12, gap: 6 },
   whyHeader:  { flexDirection: 'row', alignItems: 'center', gap: 8 },
   whyEmoji:   { fontSize: 18 },
   whyTitle:   { color: Colors.white, fontSize: 13, fontWeight: '700' },
   whyText:    { color: Colors.gray, fontSize: 12, lineHeight: 18 },
 
   stepRow:     { flexDirection: 'row', alignItems: 'flex-start', gap: 12 },
-  stepNum:     { width: 28, height: 28, borderRadius: 14, backgroundColor: 'rgba(14,224,229,0.15)', alignItems: 'center', justifyContent: 'center', flexShrink: 0 },
+  stepNum:     { width: 28, height: 28, borderRadius: 14, backgroundColor: 'rgba(1,219,238,0.15)', alignItems: 'center', justifyContent: 'center', flexShrink: 0 },
   stepNumText: { color: Colors.turquoise, fontSize: 11, fontWeight: '700' },
-  stepText:    { color: 'rgba(255,255,255,0.75)', fontSize: 13, lineHeight: 20, flex: 1, paddingTop: 4 },
+  stepText:    { color: 'rgba(253,250,244,0.75)', fontSize: 13, lineHeight: 20, flex: 1, paddingTop: 4 },
 
   ctaBtn:     { backgroundColor: Colors.turquoise, padding: 14, borderRadius: 12, alignItems: 'center', marginTop: 4 },
   ctaBtnText: { color: Colors.darkBlue, fontSize: 14, fontWeight: '700' },
 
   // ── Applications ──
   categoryPicker: { flexDirection: 'row', gap: 8 },
-  categoryBtn:    { flex: 1, alignItems: 'center', gap: 4, padding: 10, borderRadius: 12, borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)', backgroundColor: 'rgba(255,255,255,0.03)' },
+  categoryBtn:    { flex: 1, alignItems: 'center', gap: 4, padding: 10, borderRadius: 12, borderWidth: 1, borderColor: 'rgba(253,250,244,0.08)', backgroundColor: 'rgba(253,250,244,0.03)' },
   categoryEmoji:  { fontSize: 22 },
   categoryLabel:  { color: Colors.gray, fontSize: 11, fontWeight: '600' },
 
   itemsBlock:    { gap: 6 },
   itemsTitle:    { fontSize: 14, fontWeight: '700', marginBottom: 4 },
-  appItem:       { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(255,255,255,0.07)', overflow: 'hidden' },
+  appItem:       { backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(253,250,244,0.07)', overflow: 'hidden' },
   appItemRow:    { flexDirection: 'row', alignItems: 'center', gap: 10, padding: 13 },
   appItemDot:    { width: 6, height: 6, borderRadius: 3 },
   appItemText:   { flex: 1, color: Colors.white, fontSize: 13 },
-  appItemChevron:{ color: 'rgba(255,255,255,0.25)', fontSize: 10 },
+  appItemChevron:{ color: 'rgba(253,250,244,0.25)', fontSize: 10 },
   appItemExpanded:  { paddingHorizontal: 13, paddingBottom: 13, gap: 10 },
   appItemExpandedText: { color: Colors.gray, fontSize: 12, lineHeight: 19 },
   appItemBtn:    { padding: 10, borderRadius: 10, borderWidth: 1, alignItems: 'center' },
   appItemBtnText:{ fontSize: 12, fontWeight: '600' },
 
-  appFootnote:     { padding: 12, backgroundColor: 'rgba(255,255,255,0.03)', borderRadius: 12 },
-  appFootnoteText: { color: 'rgba(255,255,255,0.3)', fontSize: 11, lineHeight: 18 },
+  appFootnote:     { padding: 12, backgroundColor: 'rgba(253,250,244,0.03)', borderRadius: 12 },
+  appFootnoteText: { color: 'rgba(253,250,244,0.3)', fontSize: 11, lineHeight: 18 },
 
   // ── IE ──
-  ieGlobal:        { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 16, borderWidth: 1, padding: 16, gap: 10, alignItems: 'center' },
+  ieGlobal:        { backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 16, borderWidth: 1, padding: 16, gap: 10, alignItems: 'center' },
   ieGlobalLabel:   { fontSize: 9, color: Colors.gray, letterSpacing: 2, fontWeight: '700' },
   ieGlobalScore:   { fontSize: 24, fontWeight: '700' },
   ieGlobalBar:     { flexDirection: 'row', width: '100%', height: 6, borderRadius: 3, overflow: 'hidden', gap: 2 },
   ieGlobalSegment: { borderRadius: 3 },
   ieGlobalSub:     { fontSize: 11, color: Colors.gray, textAlign: 'center' },
 
-  ieCard:         { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 16, borderWidth: 1, padding: 14, gap: 12 },
+  ieCard:         { backgroundColor: 'rgba(253,250,244,0.04)', borderRadius: 16, borderWidth: 1, padding: 14, gap: 12 },
   ieCardHeader:   { flexDirection: 'row', gap: 12, alignItems: 'flex-start' },
   ieCardIcon:     { width: 44, height: 44, borderRadius: 12, alignItems: 'center', justifyContent: 'center', flexShrink: 0 },
   ieCardEmoji:    { fontSize: 20 },
@@ -821,37 +821,37 @@ const styles = StyleSheet.create({
   ieIndicators:    { gap: 4 },
   ieIndicatorRow:  { flexDirection: 'row', gap: 6 },
   ieIndicatorDot:  { fontSize: 16, lineHeight: 18, fontWeight: '700' },
-  ieIndicatorText: { color: 'rgba(255,255,255,0.55)', fontSize: 11, flex: 1 },
+  ieIndicatorText: { color: 'rgba(253,250,244,0.55)', fontSize: 11, flex: 1 },
 
   ieScoreBlock:  { gap: 8 },
   ieScoreLabel:  { fontSize: 10, color: Colors.gray, letterSpacing: 1.5, fontWeight: '700' },
   ieScoreRow:    { flexDirection: 'row', gap: 6 },
   ieScoreDot:    { flex: 1, height: 10, borderRadius: 5 },
 
-  ieHelpBtn:      { padding: 10, borderRadius: 10, borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)', alignItems: 'center' },
+  ieHelpBtn:      { padding: 10, borderRadius: 10, borderWidth: 1, borderColor: 'rgba(253,250,244,0.08)', alignItems: 'center' },
   ieHelpBtnText:  { color: Colors.gray, fontSize: 12 },
   ieHelpContent:  { padding: 12, borderRadius: 10, borderWidth: 1 },
-  ieHelpText:     { color: 'rgba(255,255,255,0.7)', fontSize: 12, lineHeight: 20 },
+  ieHelpText:     { color: 'rgba(253,250,244,0.7)', fontSize: 12, lineHeight: 20 },
 
-  ieCitation:       { padding: 14, borderLeftWidth: 2, borderLeftColor: 'rgba(14,224,229,0.3)', gap: 6 },
-  ieCitationText:   { color: 'rgba(255,255,255,0.5)', fontSize: 12, fontStyle: 'italic', lineHeight: 20 },
-  ieCitationAuthor: { color: 'rgba(255,255,255,0.25)', fontSize: 10 },
+  ieCitation:       { padding: 14, borderLeftWidth: 2, borderLeftColor: 'rgba(1,219,238,0.3)', gap: 6 },
+  ieCitationText:   { color: 'rgba(253,250,244,0.5)', fontSize: 12, fontStyle: 'italic', lineHeight: 20 },
+  ieCitationAuthor: { color: 'rgba(253,250,244,0.25)', fontSize: 10 },
 
   // ── Exercice ──
-  gameProgressBg:   { height: 4, backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: 2 },
+  gameProgressBg:   { height: 4, backgroundColor: 'rgba(253,250,244,0.08)', borderRadius: 2 },
   gameProgressFill: { height: '100%', backgroundColor: Colors.turquoise, borderRadius: 2 },
   gameCounter:      { color: Colors.gray, fontSize: 11, textAlign: 'right' },
-  gameCard:         { backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: 16, borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)', padding: 24, alignItems: 'center', minHeight: 100, justifyContent: 'center' },
+  gameCard:         { backgroundColor: 'rgba(253,250,244,0.06)', borderRadius: 16, borderWidth: 1, borderColor: 'rgba(253,250,244,0.12)', padding: 24, alignItems: 'center', minHeight: 100, justifyContent: 'center' },
   gameQuote:        { color: Colors.white, fontSize: 17, fontWeight: '600', textAlign: 'center', lineHeight: 26, fontStyle: 'italic' },
   gameChoices:      { flexDirection: 'row', gap: 10 },
-  gameChoiceBtn:    { flex: 1, alignItems: 'center', gap: 6, padding: 16, borderRadius: 14, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.04)' },
+  gameChoiceBtn:    { flex: 1, alignItems: 'center', gap: 6, padding: 16, borderRadius: 14, borderWidth: 1, borderColor: 'rgba(253,250,244,0.1)', backgroundColor: 'rgba(253,250,244,0.04)' },
   gameChoiceIcon:   { fontSize: 28, color: Colors.gray },
   gameChoiceLabel:  { color: Colors.white, fontSize: 13, fontWeight: '700' },
   gameChoiceSub:    { color: Colors.gray, fontSize: 10, textAlign: 'center' },
   reviewRow:        { flexDirection: 'row', alignItems: 'flex-start', gap: 10, padding: 11, borderRadius: 10, borderWidth: 1 },
-  reviewOk:         { backgroundColor: 'rgba(14,224,229,0.05)', borderColor: 'rgba(14,224,229,0.2)' },
-  reviewKo:         { backgroundColor: 'rgba(219,0,115,0.05)', borderColor: 'rgba(219,0,115,0.2)' },
+  reviewOk:         { backgroundColor: 'rgba(1,219,238,0.05)', borderColor: 'rgba(1,219,238,0.2)' },
+  reviewKo:         { backgroundColor: 'rgba(218,142,69,0.05)', borderColor: 'rgba(218,142,69,0.2)' },
   reviewIcon:       { fontSize: 16, width: 20 },
-  reviewText:       { color: 'rgba(255,255,255,0.8)', fontSize: 12, lineHeight: 18 },
+  reviewText:       { color: 'rgba(253,250,244,0.8)', fontSize: 12, lineHeight: 18 },
   reviewAnswer:     { fontSize: 11, fontWeight: '700', marginTop: 2 },
 });

@@ -438,11 +438,11 @@ const s = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 20,
-    backgroundColor: 'rgba(255,255,255,0.07)',
+    backgroundColor: 'rgba(253,250,244,0.07)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.12)',
+    borderColor: 'rgba(253,250,244,0.12)',
   },
-  backText: { color: 'rgba(255,255,255,0.55)', fontSize: 13, fontWeight: '600' },
+  backText: { color: 'rgba(253,250,244,0.55)', fontSize: 13, fontWeight: '600' },
   screenTitle: { color: Colors.white, fontSize: 15, fontWeight: '700' },
 
   // Tab bar
@@ -456,12 +456,12 @@ const s = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 7,
     borderRadius: 20,
-    backgroundColor: 'rgba(255,255,255,0.05)',
+    backgroundColor: 'rgba(253,250,244,0.05)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.08)',
+    borderColor: 'rgba(253,250,244,0.08)',
   },
   tabBtnActive: {
-    backgroundColor: 'rgba(14,224,229,0.15)',
+    backgroundColor: 'rgba(1,219,238,0.15)',
     borderColor: Colors.turquoise + '55',
   },
   tabLabel: { color: Colors.gray, fontSize: 12, fontWeight: '600' },
@@ -483,7 +483,7 @@ const s = StyleSheet.create({
   // Paragraphe
   para: {
     fontSize: 12,
-    color: 'rgba(255,255,255,0.65)',
+    color: 'rgba(253,250,244,0.65)',
     lineHeight: 20,
   },
 
@@ -491,7 +491,7 @@ const s = StyleSheet.create({
   bulletList: { gap: 6 },
   bulletRow: { flexDirection: 'row', gap: 8 },
   bullet: { color: Colors.turquoise, fontSize: 12, lineHeight: 20 },
-  bulletText: { flex: 1, fontSize: 12, color: 'rgba(255,255,255,0.65)', lineHeight: 20 },
+  bulletText: { flex: 1, fontSize: 12, color: 'rgba(253,250,244,0.65)', lineHeight: 20 },
 
   // Warning card
   warningCard: {
@@ -532,9 +532,9 @@ const s = StyleSheet.create({
 
   // Info card
   infoCard: {
-    backgroundColor: 'rgba(14,224,229,0.08)',
+    backgroundColor: 'rgba(1,219,238,0.08)',
     borderWidth: 1,
-    borderColor: 'rgba(14,224,229,0.25)',
+    borderColor: 'rgba(1,219,238,0.25)',
     borderRadius: 12,
     padding: 14,
   },
@@ -543,9 +543,9 @@ const s = StyleSheet.create({
   // Link button
   linkBtn: {
     padding: 14,
-    backgroundColor: 'rgba(14,224,229,0.08)',
+    backgroundColor: 'rgba(1,219,238,0.08)',
     borderWidth: 1,
-    borderColor: 'rgba(14,224,229,0.25)',
+    borderColor: 'rgba(1,219,238,0.25)',
     borderRadius: 12,
     alignItems: 'center',
     marginTop: 8,

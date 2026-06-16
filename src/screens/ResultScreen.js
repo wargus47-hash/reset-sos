@@ -36,7 +36,7 @@ const FORMATIONS = [
 
 const MODE_LABELS = {
   sos:       { label: 'SOS',        color: Colors.pink },
-  night:     { label: 'Nuit',       color: '#4466AA' },
+  night:     { label: 'Nuit',       color: '#002FA7' },
   discreet:  { label: 'Discret',    color: Colors.gray },
   companion: { label: 'Accomp.',    color: Colors.purple },
 };
@@ -314,13 +314,13 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 20,
-    backgroundColor: 'rgba(255,255,255,0.07)',
+    backgroundColor: 'rgba(253,250,244,0.07)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.12)',
+    borderColor: 'rgba(253,250,244,0.12)',
   },
-  backText: { color: 'rgba(255,255,255,0.55)', fontSize: 13, fontWeight: '600' },
+  backText: { color: 'rgba(253,250,244,0.55)', fontSize: 13, fontWeight: '600' },
   progressBar: { flex: 1, flexDirection: 'row', gap: 8 },
-  step:     { flex: 1, height: 3, borderRadius: 2, backgroundColor: 'rgba(255,255,255,0.1)' },
+  step:     { flex: 1, height: 3, borderRadius: 2, backgroundColor: 'rgba(253,250,244,0.1)' },
   stepDone: { backgroundColor: Colors.turquoise },
   stepActive: { backgroundColor: Colors.pink },
 
@@ -341,9 +341,9 @@ const styles = StyleSheet.create({
 
   // ── Rating block ──
   ratingBlock: {
-    backgroundColor: 'rgba(255,255,255,0.04)',
+    backgroundColor: 'rgba(253,250,244,0.04)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.08)',
+    borderColor: 'rgba(253,250,244,0.08)',
     borderRadius: 18,
     padding: 18,
     gap: 16,
@@ -358,23 +358,23 @@ const styles = StyleSheet.create({
     gap: 8,
     paddingVertical: 6,
     paddingHorizontal: 12,
-    backgroundColor: 'rgba(14,224,229,0.07)',
+    backgroundColor: 'rgba(1,219,238,0.07)',
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: 'rgba(14,224,229,0.15)',
+    borderColor: 'rgba(1,219,238,0.15)',
   },
   dropArrow: { color: Colors.turquoise, fontSize: 16, fontWeight: '700' },
-  dropText:  { color: 'rgba(255,255,255,0.7)', fontSize: 13 },
+  dropText:  { color: 'rgba(253,250,244,0.7)', fontSize: 13 },
   dropPct:   { color: Colors.turquoise, fontWeight: '700' },
 
   // ── Champs texte ──
   fieldBlock: { gap: 8 },
   fieldLabel: { fontSize: 10, color: Colors.gray, letterSpacing: 1.5, fontWeight: '700' },
-  fieldHint:  { fontSize: 10, color: 'rgba(255,255,255,0.2)', marginTop: 2 },
+  fieldHint:  { fontSize: 10, color: 'rgba(253,250,244,0.2)', marginTop: 2 },
   input: {
-    backgroundColor: 'rgba(255,255,255,0.05)',
+    backgroundColor: 'rgba(253,250,244,0.05)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.1)',
+    borderColor: 'rgba(253,250,244,0.1)',
     borderRadius: 12,
     padding: 14,
     color: Colors.white,
@@ -396,9 +396,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 10,
     padding: 16,
-    backgroundColor: 'rgba(14,224,229,0.1)',
+    backgroundColor: 'rgba(1,219,238,0.1)',
     borderWidth: 1,
-    borderColor: 'rgba(14,224,229,0.3)',
+    borderColor: 'rgba(1,219,238,0.3)',
     borderRadius: 14,
   },
   savedCheck: { fontSize: 20, color: Colors.turquoise },
@@ -406,13 +406,13 @@ const styles = StyleSheet.create({
 
   // ── Insight ──
   insightCard: {
-    backgroundColor: 'rgba(14,224,229,0.06)',
+    backgroundColor: 'rgba(1,219,238,0.06)',
     borderWidth: 1,
-    borderColor: 'rgba(14,224,229,0.2)',
+    borderColor: 'rgba(1,219,238,0.2)',
     borderRadius: 16,
     padding: 16,
   },
-  insightText:      { fontSize: 13, color: 'rgba(255,255,255,0.8)', lineHeight: 22 },
+  insightText:      { fontSize: 13, color: 'rgba(253,250,244,0.8)', lineHeight: 22 },
   insightHighlight: { color: Colors.turquoise },
 
   // ── Formations ──
@@ -420,9 +420,9 @@ const styles = StyleSheet.create({
   formationBlockTitle: { fontSize: 16, fontWeight: '700', color: Colors.white, letterSpacing: 0.3 },
   formationBlockSub:   { fontSize: 12, color: Colors.gray, lineHeight: 18 },
   formationCard: {
-    backgroundColor: 'rgba(255,255,255,0.04)',
+    backgroundColor: 'rgba(253,250,244,0.04)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.08)',
+    borderColor: 'rgba(253,250,244,0.08)',
     borderRadius: 14,
     padding: 14,
     gap: 4,
@@ -439,9 +439,9 @@ const styles = StyleSheet.create({
   formationLink:      { fontSize: 12, fontWeight: '600', marginTop: 4 },
   allFormationsBtn: {
     padding: 14,
-    backgroundColor: 'rgba(14,224,229,0.08)',
+    backgroundColor: 'rgba(1,219,238,0.08)',
     borderWidth: 1,
-    borderColor: 'rgba(14,224,229,0.25)',
+    borderColor: 'rgba(1,219,238,0.25)',
     borderRadius: 12,
     alignItems: 'center',
   },
@@ -450,11 +450,11 @@ const styles = StyleSheet.create({
   // ── Footer ──
   primaryBtn: {
     padding: 16,
-    backgroundColor: 'rgba(255,255,255,0.07)',
+    backgroundColor: 'rgba(253,250,244,0.07)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.12)',
+    borderColor: 'rgba(253,250,244,0.12)',
     borderRadius: 14,
     alignItems: 'center',
   },
-  primaryBtnText: { color: 'rgba(255,255,255,0.6)', fontSize: 14, fontWeight: '600' },
+  primaryBtnText: { color: 'rgba(253,250,244,0.6)', fontSize: 14, fontWeight: '600' },
 });

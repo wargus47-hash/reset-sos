@@ -17,7 +17,7 @@ const MODE_LABELS = {
   sos:       { label: 'SOS',         color: Colors.pink },
   calm:      { label: 'Guidé',       color: Colors.turquoise },
   companion: { label: 'Accomp.',     color: Colors.purple },
-  night:     { label: 'Nuit',        color: '#4466AA' },
+  night:     { label: 'Nuit',        color: '#002FA7' },
   discreet:  { label: 'Discret',     color: Colors.gray },
 };
 
@@ -69,7 +69,7 @@ const barStyles = StyleSheet.create({
   labelRow: { flexDirection: 'row', justifyContent: 'space-between' },
   label:    { fontSize: 10, color: Colors.gray, letterSpacing: 1, fontWeight: '600' },
   value:    { fontSize: 12, fontWeight: '700' },
-  track:    { height: 6, borderRadius: 3, backgroundColor: 'rgba(255,255,255,0.08)', overflow: 'hidden' },
+  track:    { height: 6, borderRadius: 3, backgroundColor: 'rgba(253,250,244,0.08)', overflow: 'hidden' },
   fill:     { height: '100%', borderRadius: 3 },
 });
 
@@ -139,7 +139,7 @@ function SessionCard({ s, expanded, onToggle, onDelete }) {
                 {dropPct >= 50 && <Text style={styles.libBadge}>🔓 Libération</Text>}
               </View>
             ) : drop < 0 ? (
-              <View style={[styles.dropRow, { borderColor: 'rgba(219,0,115,0.2)', backgroundColor: 'rgba(219,0,115,0.06)' }]}>
+              <View style={[styles.dropRow, { borderColor: 'rgba(218,142,69,0.2)', backgroundColor: 'rgba(218,142,69,0.06)' }]}>
                 <Text style={[styles.dropIcon, { color: Colors.pink }]}>↑</Text>
                 <Text style={styles.dropText}>Intensité en hausse — normal, le corps traite</Text>
               </View>
@@ -330,8 +330,8 @@ export default function JournalScreen({ navigation }) {
                         <View style={[
                           styles.countBadge,
                           item.count >= 3
-                            ? { backgroundColor: 'rgba(219,0,115,0.15)', borderColor: 'rgba(219,0,115,0.4)' }
-                            : { backgroundColor: 'rgba(255,255,255,0.06)', borderColor: 'rgba(255,255,255,0.12)' },
+                            ? { backgroundColor: 'rgba(218,142,69,0.15)', borderColor: 'rgba(218,142,69,0.4)' }
+                            : { backgroundColor: 'rgba(253,250,244,0.06)', borderColor: 'rgba(253,250,244,0.12)' },
                         ]}>
                           <Text style={[
                             styles.countText,
@@ -379,20 +379,20 @@ const styles = StyleSheet.create({
 
   // ── Topbar ──
   topBar:   { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 16, paddingBottom: 0 },
-  backBtn:  { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(255,255,255,0.07)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)' },
-  backText: { color: 'rgba(255,255,255,0.55)', fontSize: 13, fontWeight: '600' },
+  backBtn:  { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(253,250,244,0.07)', borderWidth: 1, borderColor: 'rgba(253,250,244,0.12)' },
+  backText: { color: 'rgba(253,250,244,0.55)', fontSize: 13, fontWeight: '600' },
   clearBtn: { color: Colors.pink, fontSize: 12, fontWeight: '600' },
 
   // ── Onglets ──
   tabs:         { flexDirection: 'row', marginHorizontal: 24, marginTop: 16, gap: 8 },
-  tab:          { flex: 1, padding: 10, borderRadius: 10, borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)', alignItems: 'center' },
-  tabActive:    { backgroundColor: 'rgba(14,224,229,0.1)', borderColor: Colors.turquoise },
+  tab:          { flex: 1, padding: 10, borderRadius: 10, borderWidth: 1, borderColor: 'rgba(253,250,244,0.08)', alignItems: 'center' },
+  tabActive:    { backgroundColor: 'rgba(1,219,238,0.1)', borderColor: Colors.turquoise },
   tabText:      { color: Colors.gray, fontSize: 12, fontWeight: '600' },
   tabTextActive:{ color: Colors.turquoise },
 
   // ── Corps ──
   body:  { padding: 24, gap: 10, paddingBottom: 48 },
-  hint:  { color: 'rgba(255,255,255,0.2)', fontSize: 11, textAlign: 'center', marginBottom: 2 },
+  hint:  { color: 'rgba(253,250,244,0.2)', fontSize: 11, textAlign: 'center', marginBottom: 2 },
   empty: { alignItems: 'center', paddingTop: 60, gap: 8 },
   emptyIcon:    { fontSize: 48 },
   emptyText:    { color: Colors.white, fontSize: 16, fontWeight: '600' },
@@ -400,21 +400,21 @@ const styles = StyleSheet.create({
 
   // ── Stats ──
   statsRow: { flexDirection: 'row', gap: 10, marginBottom: 4 },
-  statBox:  { flex: 1, backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: 12, padding: 14, alignItems: 'center' },
+  statBox:  { flex: 1, backgroundColor: 'rgba(253,250,244,0.05)', borderRadius: 12, padding: 14, alignItems: 'center' },
   statNum:  { fontSize: 24, fontWeight: '700', color: Colors.white },
   statLabel:{ fontSize: 10, color: Colors.gray, marginTop: 2, letterSpacing: 1 },
 
   // ── Carte séance ──
   sessionCard: {
-    backgroundColor: 'rgba(255,255,255,0.04)',
+    backgroundColor: 'rgba(253,250,244,0.04)',
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.08)',
+    borderColor: 'rgba(253,250,244,0.08)',
     overflow: 'hidden',
   },
   sessionCardOpen: {
-    borderColor: 'rgba(14,224,229,0.25)',
-    backgroundColor: 'rgba(14,224,229,0.03)',
+    borderColor: 'rgba(1,219,238,0.25)',
+    backgroundColor: 'rgba(1,219,238,0.03)',
   },
 
   // En-tête de carte
@@ -431,10 +431,10 @@ const styles = StyleSheet.create({
   modeBadge:      { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 6, borderWidth: 1 },
   modeBadgeText:  { fontSize: 9, fontWeight: '700', letterSpacing: 1 },
   sessionLabel:   { color: Colors.white, fontSize: 13, fontWeight: '600' },
-  sessionLabelEmpty:{ color: 'rgba(255,255,255,0.25)', fontSize: 12, fontStyle: 'italic' },
+  sessionLabelEmpty:{ color: 'rgba(253,250,244,0.25)', fontSize: 12, fontStyle: 'italic' },
   sessionDate:    { color: Colors.gray, fontSize: 11 },
   dropBadge:      { color: Colors.turquoise, fontSize: 12, fontWeight: '700' },
-  chevron:        { color: 'rgba(255,255,255,0.25)', fontSize: 10 },
+  chevron:        { color: 'rgba(253,250,244,0.25)', fontSize: 10 },
 
   // Corps déplié
   cardBody: {
@@ -444,12 +444,12 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    backgroundColor: 'rgba(255,255,255,0.06)',
+    backgroundColor: 'rgba(253,250,244,0.06)',
   },
 
   // Métadonnées
   metaBlock: { gap: 6 },
-  metaLine:  { color: 'rgba(255,255,255,0.5)', fontSize: 12, lineHeight: 18 },
+  metaLine:  { color: 'rgba(253,250,244,0.5)', fontSize: 12, lineHeight: 18 },
 
   // Scores
   scoresBlock: { gap: 12 },
@@ -458,14 +458,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     padding: 10,
-    backgroundColor: 'rgba(14,224,229,0.07)',
+    backgroundColor: 'rgba(1,219,238,0.07)',
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: 'rgba(14,224,229,0.18)',
+    borderColor: 'rgba(1,219,238,0.18)',
     flexWrap: 'wrap',
   },
   dropIcon:      { fontSize: 16, color: Colors.turquoise, fontWeight: '700' },
-  dropText:      { color: 'rgba(255,255,255,0.7)', fontSize: 12, flex: 1 },
+  dropText:      { color: 'rgba(253,250,244,0.7)', fontSize: 12, flex: 1 },
   dropHighlight: { color: Colors.turquoise, fontWeight: '700' },
   dropPct:       { color: Colors.turquoise },
   libBadge:      { fontSize: 12 },
@@ -473,26 +473,26 @@ const styles = StyleSheet.create({
   // Notes
   notesBlock: { gap: 6 },
   notesLabel: { fontSize: 10, color: Colors.gray, letterSpacing: 1.5, fontWeight: '700' },
-  notesText:  { color: 'rgba(255,255,255,0.7)', fontSize: 13, lineHeight: 21 },
+  notesText:  { color: 'rgba(253,250,244,0.7)', fontSize: 13, lineHeight: 21 },
 
   // Supprimer
   deleteBtn: {
     paddingVertical: 8,
     alignItems: 'center',
     borderTopWidth: 1,
-    borderTopColor: 'rgba(255,255,255,0.05)',
+    borderTopColor: 'rgba(253,250,244,0.05)',
     marginTop: 2,
   },
-  deleteBtnText: { color: 'rgba(219,0,115,0.5)', fontSize: 12, fontWeight: '600' },
+  deleteBtnText: { color: 'rgba(218,142,69,0.5)', fontSize: 12, fontWeight: '600' },
 
   // ── Bibliothèque ──
   libraryItem: {
     flexDirection: 'row',
     alignItems: 'flex-start',
-    backgroundColor: 'rgba(255,255,255,0.04)',
+    backgroundColor: 'rgba(253,250,244,0.04)',
     borderRadius: 14,
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.08)',
+    borderColor: 'rgba(253,250,244,0.08)',
     padding: 14,
     gap: 10,
   },
@@ -503,5 +503,5 @@ const styles = StyleSheet.create({
   countText:       { fontSize: 11, fontWeight: '700' },
   libraryMeta:     { color: Colors.gray, fontSize: 11 },
   libraryWarning:  { color: Colors.pink, fontSize: 11, lineHeight: 16 },
-  deleteX:         { color: 'rgba(255,255,255,0.25)', fontSize: 16, padding: 4, marginTop: 2 },
+  deleteX:         { color: 'rgba(253,250,244,0.25)', fontSize: 16, padding: 4, marginTop: 2 },
 });

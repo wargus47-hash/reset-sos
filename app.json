@@ -28,7 +28,7 @@
         "expo-notifications",
         {
           "icon": "./assets/icon.png",
-          "color": "#060084",
+          "color": "#001A4D",
           "sounds": []
         }
       ]
@@ -38,8 +38,8 @@
       "name": "RESET SOS",
       "shortName": "RESET SOS",
       "description": "Régulation émotionnelle sensorielle — Méthode RESET par Atypikali",
-      "themeColor": "#060084",
-      "backgroundColor": "#060084",
+      "themeColor": "#001A4D",
+      "backgroundColor": "#001A4D",
       "output": "single",
       "baseUrl": "/reset-sos"
     }

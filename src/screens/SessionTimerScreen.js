@@ -90,7 +90,7 @@ export default function SessionTimerScreen({ navigation }) {
   const ringColor = phase === 'warning' ? Colors.pink
                   : phase === 'done'    ? Colors.turquoise
                   : Colors.turquoise;
-  const bgRing = phase === 'warning' ? 'rgba(219,0,115,0.15)' : 'rgba(14,224,229,0.08)';
+  const bgRing = phase === 'warning' ? 'rgba(218,142,69,0.15)' : 'rgba(1,219,238,0.08)';
 
   return (
     <SafeAreaView style={s.safe}>
@@ -211,9 +211,9 @@ export default function SessionTimerScreen({ navigation }) {
 const s = StyleSheet.create({
   safe:   { flex: 1, backgroundColor: Colors.darkBlue },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 16 },
-  back:   { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(255,255,255,0.07)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)' },
-  backText: { color: 'rgba(255,255,255,0.55)', fontSize: 13, fontWeight: '600' },
-  badge:  { backgroundColor: 'rgba(14,224,229,0.1)', borderRadius: 8, paddingHorizontal: 10, paddingVertical: 4, borderWidth: 1, borderColor: 'rgba(14,224,229,0.3)' },
+  back:   { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 20, backgroundColor: 'rgba(253,250,244,0.07)', borderWidth: 1, borderColor: 'rgba(253,250,244,0.12)' },
+  backText: { color: 'rgba(253,250,244,0.55)', fontSize: 13, fontWeight: '600' },
+  badge:  { backgroundColor: 'rgba(1,219,238,0.1)', borderRadius: 8, paddingHorizontal: 10, paddingVertical: 4, borderWidth: 1, borderColor: 'rgba(1,219,238,0.3)' },
   badgeText: { color: Colors.turquoise, fontSize: 9, fontWeight: '700', letterSpacing: 1.5 },
 
   center: { alignItems: 'center', paddingTop: 8, paddingBottom: 4 },
@@ -222,32 +222,32 @@ const s = StyleSheet.create({
   timerDisplay: { fontSize: 46, fontWeight: '700', color: Colors.white, fontVariant: ['tabular-nums'] },
   timerLabel:   { fontSize: 11, color: Colors.gray, letterSpacing: 1 },
   progressBar:  { position: 'absolute', bottom: 0, left: 0, height: 4, borderRadius: 2 },
-  maxLabel: { marginTop: 10, fontSize: 11, color: 'rgba(255,255,255,0.25)', letterSpacing: 0.5 },
+  maxLabel: { marginTop: 10, fontSize: 11, color: 'rgba(253,250,244,0.25)', letterSpacing: 0.5 },
 
   ctaZone:   { paddingHorizontal: 24, marginBottom: 8 },
   startBtn:  { backgroundColor: Colors.turquoise, padding: 16, borderRadius: 14, alignItems: 'center' },
   startBtnText: { color: Colors.darkBlue, fontSize: 16, fontWeight: '700' },
-  stopBtn:   { backgroundColor: 'rgba(219,0,115,0.15)', padding: 16, borderRadius: 14, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(219,0,115,0.4)' },
+  stopBtn:   { backgroundColor: 'rgba(218,142,69,0.15)', padding: 16, borderRadius: 14, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(218,142,69,0.4)' },
   stopBtnText: { color: Colors.pink, fontSize: 16, fontWeight: '700' },
 
   sep:     { flexDirection: 'row', alignItems: 'center', marginHorizontal: 24, gap: 10, marginVertical: 12 },
-  sepLine: { flex: 1, height: 1, backgroundColor: 'rgba(255,255,255,0.07)' },
+  sepLine: { flex: 1, height: 1, backgroundColor: 'rgba(253,250,244,0.07)' },
   sepText: { fontSize: 10, color: Colors.gray, letterSpacing: 1 },
 
   hippoZone: { alignItems: 'center', gap: 10 },
   hippoDesc: { fontSize: 12, color: Colors.gray, textAlign: 'center', lineHeight: 18 },
-  hippoBtn:  { width: 90, height: 90, borderRadius: 45, backgroundColor: 'rgba(255,255,255,0.06)', borderWidth: 2, borderColor: 'rgba(255,255,255,0.15)', alignItems: 'center', justifyContent: 'center', gap: 2 },
-  hippoBtnFlash: { backgroundColor: 'rgba(14,224,229,0.15)', borderColor: Colors.turquoise },
+  hippoBtn:  { width: 90, height: 90, borderRadius: 45, backgroundColor: 'rgba(253,250,244,0.06)', borderWidth: 2, borderColor: 'rgba(253,250,244,0.15)', alignItems: 'center', justifyContent: 'center', gap: 2 },
+  hippoBtnFlash: { backgroundColor: 'rgba(1,219,238,0.15)', borderColor: Colors.turquoise },
   hippoBtnIcon:  { fontSize: 28 },
   hippoBtnCount: { fontSize: 18, fontWeight: '700', color: Colors.white },
   hippoRow:  { flexDirection: 'row', flexWrap: 'wrap', gap: 5, paddingHorizontal: 32, justifyContent: 'center' },
-  hippoDot:      { width: 14, height: 6, borderRadius: 3, backgroundColor: 'rgba(255,255,255,0.1)' },
+  hippoDot:      { width: 14, height: 6, borderRadius: 3, backgroundColor: 'rgba(253,250,244,0.1)' },
   hippoDotActive:{ backgroundColor: Colors.purple },
   hippoDotWarn:  { backgroundColor: Colors.pink },
   hippoHint:     { fontSize: 12, color: Colors.gray, letterSpacing: 0.5 },
   hippoReset:    { paddingVertical: 6, paddingHorizontal: 16 },
-  hippoResetText:{ fontSize: 11, color: 'rgba(255,255,255,0.2)', textDecorationLine: 'underline' },
+  hippoResetText:{ fontSize: 11, color: 'rgba(253,250,244,0.2)', textDecorationLine: 'underline' },
 
-  reminder: { marginHorizontal: 20, marginTop: 8, padding: 12, backgroundColor: 'rgba(14,224,229,0.06)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(14,224,229,0.15)' },
-  reminderText: { fontSize: 12, color: 'rgba(255,255,255,0.6)', textAlign: 'center', lineHeight: 18 },
+  reminder: { marginHorizontal: 20, marginTop: 8, padding: 12, backgroundColor: 'rgba(1,219,238,0.06)', borderRadius: 12, borderWidth: 1, borderColor: 'rgba(1,219,238,0.15)' },
+  reminderText: { fontSize: 12, color: 'rgba(253,250,244,0.6)', textAlign: 'center', lineHeight: 18 },
 });

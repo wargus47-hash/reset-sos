@@ -16,7 +16,7 @@ export default function CloseEyesScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.safe}>
-      <StatusBar barStyle="light-content" backgroundColor="#020040" />
+      <StatusBar barStyle="light-content" backgroundColor="#001A4D" />
 
       {/* Barre de progression */}
       <View style={styles.progressBar}>
@@ -59,7 +59,7 @@ export default function CloseEyesScreen({ navigation }) {
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    backgroundColor: '#020040',
+    backgroundColor: '#001A4D',
   },
   progressBar: {
     flexDirection: 'row',
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   },
   step: {
     flex: 1, height: 3, borderRadius: 2,
-    backgroundColor: 'rgba(255,255,255,0.1)',
+    backgroundColor: 'rgba(253,250,244,0.1)',
   },
   stepDone:   { backgroundColor: Colors.turquoise },
   stepActive: { backgroundColor: Colors.pink },
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     paddingHorizontal: 32,
     borderWidth: 1.5,
-    borderColor: 'rgba(255,255,255,0.2)',
+    borderColor: 'rgba(253,250,244,0.2)',
     borderRadius: 14,
     width: '100%',
     alignItems: 'center',
@@ -118,5 +118,5 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   backBtn: { marginTop: 8 },
-  backText: { color: 'rgba(255,255,255,0.25)', fontSize: 13 },
+  backText: { color: 'rgba(253,250,244,0.25)', fontSize: 13 },
 });
